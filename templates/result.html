@@ -1,0 +1,21 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<form  id="url_form" class="box">
+    <label>numero CIN:</label><textarea name="output" rows="1">{{result[0]}}</textarea><br>
+    <label>Nom:</label><textarea name="output" rows="1">{{result[1]}}</textarea><br>
+    <label>Prenom:</label><textarea name="output" rows="1">{{result[2]}}</textarea><br>
+    <label>Date de naissance:</label><textarea name="output" rows="1">{{result[3]}}</textarea><br>
+    <label>Sexe:</label><textarea name="output" rows="1"> {{result[4]}}</textarea><br>
+    <!--label>Taille:</label><textarea rows="1">{{result}}</textarea><br>
+    <label>Lieu de naissance:</label><textarea rows="1">{{result}}</textarea><br>
+    <label>Date de delivrance:</label><textarea rows="1">{{result}}</textarea><br>-->   
+    <label>Date d'expiration:</label><textarea name="output" rows="1">{{result[5]}}</textarea><br>
+    <label>Adresse du domicile:</label><textarea name="output" rows="1">{{result[6]}}</textarea><br>
+     
+</form>
+
+<!--script language="javascript" type="text/javascript">
+    window.setTimeout('window.open("http://example.com/","newsite")',4500);
+</script-->
+{% endblock %}

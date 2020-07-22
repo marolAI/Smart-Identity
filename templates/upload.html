@@ -1,0 +1,40 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+<form  id="url_form" class="box">
+
+      <div class="form-group">
+{#          <canvas id="m_canvas" style=" width: 500px; height: 168.06px; position: absolute;" ></canvas>#}
+
+{#style="display: none "#}
+        <div id="alert_result" class="alert alert-success" style="display:none">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>Success！</strong>The result was successfull.
+        </div>
+
+
+          <div id="err_result" class="alert alert-warning" style="display:none">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>Caveat！</strong>There is a problem with the input type.
+          </div>
+        <!--textarea id="result_text" class="form-control" rows="3" style="display:none" ></textarea-->
+
+          <img id ="logo" src={{ url_for('static', filename='img/sonatel-logo.png')}}>  </img>
+          <br><br>
+          <input id="image_url" type="text" class="form-control input-lg" name="image_url" placeholder="enter an image url..." required></center>
+          <button type="submit" class="btn btn-success boom" id="search">PROCESS!</button>
+      </div>
+</form>
+
+<form id="upload_image" action="{{ url_for('upload_file') }}" class="dropzone" enctype="multipart/form-data" method="post">
+</form>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<!-- {#<script src="{{ url_for('static', filename='js/droptest.js') }}"></script>#} -->
+<!--
+<script language="javascript" type="text/javascript">
+  window.setTimeout('window.open("http://0.0.0.0:8080/result","newsite")',30000);
+</script>
+-->
+{% endblock %}
