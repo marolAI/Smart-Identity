@@ -1,10 +1,12 @@
 # Dependencies
-* keras 2.2.4
-* tensorflow 1.5
-* opencv 3.x
-* PIL 5.2.0
-* numpy 1.15.2
-* flask 1.0.2
+* opencv==4.2.0
+* flask==1.1.2
+* imutils==0.5.3
+* Pillow==2.2.2
+* pytesseract==0.3.4
+* scikit-image==0.17.2
+* Keras==2.3.1
+* tensorflow==2.0.0
 
 ***
 # Demo
