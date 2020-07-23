@@ -17,4 +17,4 @@
 * Follow the instruction in the video.
 ***
 # Flowchart of the project
-![ ](/media/maro/6E886E5C721CA119/Schools/AIMS-SN/Internship/smart_identity/flowchart.png  "flowchart")
+![ ](flowchart.png  "flowchart")
