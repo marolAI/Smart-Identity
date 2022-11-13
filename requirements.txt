@@ -1,9 +1,8 @@
-opencv==4.2.0
-flask==1.1.2
+opencv-python==4.6.0.66
+Flask==2.1.0
 imutils==0.5.3
-Pillow==2.2.2
+Pillow==9.3.0
 pytesseract==0.3.4
-scikit-image==0.17.2
-Keras==2.3.1
-tensorflow==2.0.0
-
+scikit-image==0.19.3
+Keras=2.10.0
+tensorflow==2.10.0

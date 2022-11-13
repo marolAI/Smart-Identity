@@ -1,8 +1,4 @@
-# USAGE
-# python test_network.py --model santa_not_santa.model --image images/examples/santa_01.png
-
-# import the necessary packages
-from keras.preprocessing.image import img_to_array
+from tensorflow.keras.utils import img_to_array
 from tensorflow.keras.models import load_model
 from keras import backend as K
 import numpy as np
@@ -28,6 +24,3 @@ def id_not_id(image, model="id_not_id.model"):
 	proba = Id if Id > notId else notId
 
 	return label, proba
-
-
-#print(id_not_id(img))
