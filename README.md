@@ -18,7 +18,7 @@ This is a project realized during my internship at Sonatel Senegal, submitted as
    ```
 3. Install packages
    ```sh
-   pip install requirements.txt
+   pip install -r requirements.txt
    ```
 4. Run the server
    ```sh
