@@ -28,7 +28,7 @@ def process():
             
             image = sharpen_edge(image)
             
-            res = classify(image, model="backend/models/id_not_id.model")
+            res = classify(image, model="backend/id_not_id.model")
             c1, _, c2 = st.columns([2, 0.5, 2])
             c1.image(url, use_column_width=True)
             c2.subheader("Classification Result")
