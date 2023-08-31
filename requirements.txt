@@ -1,6 +1,6 @@
 streamlit==1.26.0
 opencv-python==4.6.0.66
-Flask==2.1.0
+Flask==2.2.5
 imutils==0.5.3
 Pillow==9.3.0
 pytesseract==0.3.4
