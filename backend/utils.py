@@ -1,29 +1,24 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 11 09:44:46 2018
-
-@author: maro
-"""
-
-
 import cv2
 import numpy as np
 import imutils
+import streamlit as st
+
 from skimage import exposure
 
-im_width = 500
-im_height = 324
+
+IM_WIDTH = 500
+IM_HEIGHT = 324
+
 
 def compute_edges(image):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    #gray = cv2.bilateralFilter(gray, 11, 17, 17)
     gray = cv2.medianBlur(gray,3)
     kernel = np.ones((7,7),np.uint8)
     erosion = cv2.erode(gray,kernel,iterations = 2)
     dilation = cv2.dilate(erosion,kernel,iterations = 2)
     edged = cv2.Canny(dilation, 20, 200)
     return edged
+
 
 def sharpen_edge(image):
     kernel_sharpen = np.array([[-1,-1,-1,-1,-1],
@@ -34,6 +29,7 @@ def sharpen_edge(image):
     sharpened = cv2.filter2D(image, -1, kernel_sharpen)
     return sharpened
 
+
 def get_angle(image):
     edged = compute_edges(image)
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT,(7,7))
@@ -42,8 +38,7 @@ def get_angle(image):
     c = max(contours, key = cv2.contourArea)
     angle = cv2.minAreaRect(c)[-1]
     rect = cv2.minAreaRect(c)
-    p=np.array(rect[1])
-    #print(p[0], p[1])
+    p = np.array(rect[1])
     if p[0] < p[1]:
         act_angle=rect[-1]+180
     else:
@@ -54,6 +49,8 @@ def get_angle(image):
     else:
         angle=act_angle- 90
     return angle
+
+
 
 def rotate_image(mat, angle):
   # angle in degrees
@@ -133,20 +130,7 @@ def find_contour(image):
         # convert the warped image to grayscale and then adjust the intensity of the pixels to have minimum and maximum
         # values of 0 and 255, respectively
         warp = exposure.rescale_intensity(warp, out_range=(0, 255))
-        warp = cv2.resize(warp, (im_width, im_height), interpolation=cv2.INTER_NEAREST)
+        warp = cv2.resize(warp, (IM_WIDTH, IM_HEIGHT), interpolation=cv2.INTER_NEAREST)
         return warp
     except AttributeError as e:
-        print(e, ".Please check your background to solve the problem!")
-
-
-#image = cv2.imread("../../../uploads/IMG_21.jpg")
-##image = cv2.resize(image, (341, 512))
-#image = imutils.resize(image, height=500)
-#image = sharpen_edge(image)
-#rotated = rotate_image(image, get_angle(image))
-#screen = find_contour(rotated)
-#cv2.imshow("Original", image)
-#cv2.imshow("Rotated", rotated)
-#cv2.imshow("Screen", screen)
-#cv2.waitKey(0)
-#cv2.destroyAllWindows()
+        st.error(f"{e}. Please check your background to solve the problem!")

@@ -1,3 +1,4 @@
+streamlit==1.26.0
 opencv-python==4.6.0.66
 Flask==2.1.0
 imutils==0.5.3

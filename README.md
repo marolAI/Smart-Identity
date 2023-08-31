@@ -1,39 +1,13 @@
 # Smart Identity
-![ ](assets/flowchart.png  "flowchart")
 
-This is a project realized during my internship at Sonatel Senegal, submitted as part of the partial completion of my Master II at [AIMS Senegal](https://aims-senegal.org/). It consists in digitizing the ECOWAS identity card using OCR technique.
+This project was undertaken during my internship at Sonatel Senegal and is being presented as a partial fulfillment of my Master II program at [AIMS Senegal](https://aims-senegal.org/). The project involves the digitization of the ECOWAS identity card utilizing OCR techniques.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-1. Clone the repo
-   ```sh
-   https://github.com/marolAI/Smart-Identity.git
-   ```
-2. Change directory to `Smart-Identity`
-   ```sh
-   cd Smart-Identity
-   ```
-3. Install packages
-   ```sh
-   pip install requirements.txt
-   ```
-4. Run the server
-   ```sh
-   python ocr_server.py
-   ```
-5. Open `http://0.0.0.0:8080` to your browser.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+Please note that, due to Sonatel's ownership, the complete code and model cannot be shared as open source. The provided streamlit app serves solely as a demonstration of my accomplishments. The app showcases the classification of ID cards exclusively.
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+This project is licensed under the [MIT License](LICENSE.txt).
 
 
 <!-- CONTACT -->
@@ -43,7 +17,6 @@ Andriamarolahy - [@Massa_Be](https://twitter.com/twitter_handle) - andriamarolah
 
 Project Link: [https://github.com/marolAI/Smart-Identity](https://github.com/marolAI/Smart-Identity)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- ACKNOWLEDGMENTS -->
@@ -52,5 +25,4 @@ Project Link: [https://github.com/marolAI/Smart-Identity](https://github.com/mar
 * [Sonatel Senegal](https://sonatel.sn/)
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
