@@ -19,6 +19,6 @@ def classify(image, model="id_not_id.model"):
 	K.clear_session()
 	
 	# build the label
-	label = "ID" if Id > notId else "Not ID"
+	label = "ECOWAS ID Card" if Id > notId else "Not ECOWAS ID Card"
 
 	return label

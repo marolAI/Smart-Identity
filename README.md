@@ -4,25 +4,27 @@ This project was undertaken during my internship at Sonatel Senegal and is being
 
 Please note that, due to Sonatel's ownership, the complete code and model cannot be shared as open source. The provided streamlit app serves solely as a demonstration of my accomplishments. The app showcases the classification of ID cards exclusively.
 
+Demo: [https://smart-identity.streamlit.app/](https://smart-identity.streamlit.app/)
+
 <!-- LICENSE -->
 ## License
 
-This project is licensed under the [MIT License](LICENSE.txt).
+This project is licensed under the [MIT License](LICENSE).
 
 
 <!-- CONTACT -->
 ## Contact
 
-Andriamarolahy - [@Massa_Be](https://twitter.com/twitter_handle) - andriamarolahy.rabetokotany@aims-senegal.org
+Twitter: [@Massa_Be](https://twitter.com/twitter_handle)
 
-Project Link: [https://github.com/marolAI/Smart-Identity](https://github.com/marolAI/Smart-Identity)
-
+Mail: marolahyrabe@gmail.com
 
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
 * [Sonatel Senegal](https://sonatel.sn/)
+* [AIMS Senegal](https://aims-senegal.org/)
 
 
 
