@@ -50,14 +50,12 @@ def process():
                 image = url_to_image(url)
                 image = sharpen_edge(image)
                 image_with_info.append((image, url))
-                
         elif selection == "path":
             path = st.file_uploader("Import an image file", type=["jpg", "png", "jpeg"])
             if path:
                 image = cv2.imdecode(np.fromstring(path.read(), np.uint8), 1)
                 image = sharpen_edge(image)
                 image_with_info.append((image, path))
-                
         else:
             st.error(f"{selection} not valid.")
     
@@ -74,7 +72,7 @@ def process():
         st.markdown("#### Classification Result:")
         if image_with_info:
             try:
-                res = classify(image_with_info[0][0], model="backend/id_not_id.model")
+                res = classify(image_with_info[0][0], model_path="backend/id_not_id.model")
                 
                 if res == "ECOWAS ID Card":
                     st.success("The image is classified as **{}**.".format(res))
@@ -91,11 +89,7 @@ def process():
             except Exception as e:
                 st.error("Error: {}".format(e))
             
-            st.image(image_with_info[0][1], use_column_width=True)
+            st.image(image_with_info[0][1], use_container_width=True)
     st.write("\n")
     st.markdown("*** *It is important to note that the outcome of the model's classification can still be enhanced.* ***")
-    
-    
-    
-    
     
