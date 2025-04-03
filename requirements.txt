@@ -4,6 +4,6 @@ Flask
 imutils
 scikit-image
 Keras==2.15
-tensorflow==1.9
+tensorflow==2.8.0
 protobuf==3.20.*
 numpy==1.26.4
